@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Temporizador y calculadora</title>
+</head>
+
+<body>
+    <div class="container text-center" id="container">
+        <button onclick="calculadoraMostrar()" class="btn btn-info btn-lg">Calculadora</button>
+        <button onclick="temporizadorMostrar()" class="btn btn-info btn-lg">Temporizador</button>
+
+        <div class="container-fluid" id="calcu-container">
+            <h1 class="display-1">Calculadora</h1>
+            <label for="primerNumero" class="h4">Ingrese el primer número</label>
+            <input type="text" class="form-control" id="primerNumero">
+            <label for="segundoNumero" class="h4">Ingrese el segundo número</label>
+            <input type="text" class="form-control" id="segundoNumero">
+            <br>
+            <button class="btn btn-primary mb-3" id="btn-suma">Suma</button>
+            <button class="btn btn-primary mb-3" id="btn-resta">Resta</button>
+            <button class="btn btn-primary mb-3" id="btn-multiplicacion">Multiplicación</button>
+            <button class="btn btn-primary mb-3" id="btn-division">División</button>
+            <p class="h4" id="pNumeroUno"></p>
+            <p class="h4" id="pNumeroDos"></p>
+            <p class="h4" id="resultado"></p>
+        </div>
+
+        <div class="container-fluid text-center" id="tempo-container">
+            <h1 class="display-1">Temporizador</h1>
+            <div class="container-md h1"  id="timer">
+                <input type="number" id="tiempo" min="1" placeholder="Tiempo en segundos">
+                <button onclick="temporizador()" class="btn btn-success">Iniciar temporizador</button>
+                <p class="h1" id="contandoTiempo"></p>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="./src/main.js"></script>
+    <script src="./src/calculadora.js"></script>
+    <script src="./src/temporizador.js"></script>
+</body>
+
+</html>
